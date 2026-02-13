@@ -1,0 +1,89 @@
+.boot-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Courier New', monospace;
+}
+
+.boot-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.boot-content {
+  color: #00ff00;
+  font-size: 15px;
+  line-height: 1.8;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.boot-line {
+  margin-bottom: 4px;
+  word-wrap: break-word;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+  color: #00ff00;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.boot-button-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.boot-button {
+  background: transparent;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  padding: 12px 24px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.boot-button:hover {
+  background: #00ff00;
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+}
+
+.boot-button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .boot-content {
+    font-size: 14px;
+  }
+  
+  .boot-button {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+}

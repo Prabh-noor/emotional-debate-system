@@ -1,0 +1,122 @@
+.final-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffeef8 0%, #ffd6e8 50%, #ffc0d9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeInBackground 1s ease-in;
+}
+
+.final-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.final-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.final-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.final-content {
+  text-align: center;
+}
+
+.final-line {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeInLine 0.6s ease-out forwards;
+}
+
+.final-line:nth-child(1) { animation-delay: 0.2s; }
+.final-line:nth-child(2) { animation-delay: 0.4s; }
+.final-line:nth-child(3) { animation-delay: 0.6s; }
+.final-line:nth-child(4) { animation-delay: 0.8s; }
+.final-line:nth-child(6) { animation-delay: 1.2s; }
+.final-line:nth-child(7) { animation-delay: 1.4s; }
+.final-line:nth-child(8) { animation-delay: 1.6s; }
+.final-line:nth-child(9) { animation-delay: 1.8s; }
+.final-line:nth-child(11) { animation-delay: 2.2s; }
+
+.final-line.highlight {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff6b9d;
+  margin-top: 10px;
+  animation-delay: 2.2s;
+}
+
+.final-spacer {
+  height: 20px;
+}
+
+.final-spacer-large {
+  height: 40px;
+}
+
+.final-status {
+  font-size: 14px;
+  color: #666;
+  margin-top: 30px;
+  opacity: 0;
+  animation: fadeInLine 0.6s ease-out forwards;
+  animation-delay: 2.6s;
+}
+
+.final-status strong {
+  color: #ff6b9d;
+  font-weight: 600;
+}
+
+@keyframes fadeInBackground {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLine {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .final-card {
+    padding: 30px 20px;
+  }
+
+  .final-line {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .final-line.highlight {
+    font-size: 18px;
+  }
+
+  .final-status {
+    font-size: 12px;
+  }
+}
